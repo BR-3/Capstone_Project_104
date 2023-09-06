@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    MCON 104 Capstone Project
+    Sewing Website
+
+    Author: Bluma Rodkin
+    Date: 11/13/2022
+
+    file name: booking.html
+    -->
+
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/table_styles.css" rel="stylesheet">
+    <link href="/css/form_styles.css" rel="stylesheet">
+    <script src="/js/formsubmit.js"></script>
+    <script src = "/js/date_update.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="/images/1.png" alt="Alterations by Chumi">
+        <h1 id="title">Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <h1>Book an appointment today!</h1>
+        <table> <!-- this will show times of availability-->
+            <caption>Time slots available for appointments</caption>
+            <colgroup>
+                <col id="firstCol"/>
+                <col class="timeCols" span="7"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Shabbos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>6:30 PM</th>
+                    <td rowspan = 7>Available</td>
+                    <td rowspan="3">---</td>
+                    <td rowspan = 7>Available</td>
+                    <td rowspan="3">---</td>
+                    <td rowspan=4>---</td>
+                    <td rowspan="7">---</td>
+                    <td rowspan="5">---</td>
+                </tr>
+                <tr>
+                    <th>7:00 PM</th>
+                </tr>
+                <tr>
+                    <th>7:30 PM</th>
+                </tr>
+                <tr>
+                    <th>8:00 PM</th>
+                    <td rowspan="4">Available</td>
+                    <td rowspan="4">Available</td>
+                </tr>
+                <tr>
+                    <th>8:30 PM</th>
+                    <td rowspan = 3>Available</td>
+                </tr>
+                <tr>
+                    <th>9:00 PM</th>
+                    <td rowspan="2">Available</td>
+                </tr>
+                <tr>
+                    <th>9:30 PM</th>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <form id="survey" action="/js/formsubmit.js" method="post">
+            <fieldset id="custInfo">
+                <legend>Customer Information</legend>
+                <div class="formRow">
+                    <label for="name">*Name</label>
+                    <input name="custName" id="name" type="text" placeholder="first and last name" required/>
+                </div>
+
+                <div class="formRow">
+                    <label for="phone">*Phone Number</label>
+                    <input name="custPhone" id="phone" type="tel" placeholder="(***)***-****"
+                           pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required/>
+                </div>
+
+                <div class="formRow">
+                    <label for="mail">E-mail</label>
+                    <input name="custEmail" id="mail" type="email">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Appointment Details</legend>
+
+                <div class="formRow">
+                    <label for="date">*What Day?</label>
+                    <input name="apptDate" id="date" type="date" required>
+                </div>
+
+                <div class="formRow">
+                    <label for="appt">*Please Choose Appointment Time (Refer to Availability Chart Above)</label>
+                    <input name="apptTime" id="appt" type="text" list="timeSlots" required>
+                    <datalist id="timeSlots">
+                        <option value="6:30 PM"/>
+                        <option value="7:00 PM"/>
+                        <option value="7:30 PM"/>
+                        <option value="8:00 PM"/>
+                        <option value="8:30 PM"/>
+                        <option value="9:00 PM"/>
+                        <option value="9:30 PM"/>
+                    </datalist>
+                </div>
+
+                <div class="formRow" id="amountClothing">
+                    <label>How many alterations?</label>
+                    <fieldset class="optgroup">
+                        <label for="opt1">1-5</label>
+                        <input name="clothingAmt" id="opt1" value="1-5" type = "radio">
+                        <label for="opt2">6-10</label>
+                        <input name="clothingAmt" id="opt2" value = "6-10" type = "radio">
+                        <label for = "opt3">11-15</label>
+                        <input name = "clothingAmt" id = "opt3" value = "11-15" type = "radio">
+                        <label for="opt4">16+</label>
+                        <input name="clothingAmt" id = "opt4" value = "16+" type = "radio">
+                    </fieldset>
+                </div>
+
+            </fieldset>
+
+            <fieldset id="custFeedback">
+
+                <legend>Feedback</legend>
+
+                <div class="formRow">
+                    <label for="custResponse">We welcome your feedback! Please let us know about your
+                    questions, concerns, and comments.</label>
+                    <textarea name="otherInfo" id="custResponse"></textarea>
+                </div>
+
+            </fieldset>
+
+            <div id="buttons">
+                <input type="submit" value="Submit My Appointment Request"/>
+                <input type="reset" value="Cancel"/>
+            </div>
+
+        </form>
+    </article>
+    <footer>
+        Alterations by Chumi &#8226; Far Rockaway, New York &#8226; 917 620 7917
+    </footer>
+    <div id="currentDate"></div>
+</body>
+</html>
