@@ -1,0 +1,69 @@
+/*
+   MCON 104 Capstone Project
+
+   Survey Forms Style Sheet
+   Author: Bluma Rodkin
+   Date:   11/20/2022
+
+   Filename:         form_styles.css
+
+*/
+
+/* form layout styles */
+div.formRow {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px 0;
+}
+
+div.formRow >* {
+    flex: 1 1 150px;
+}
+
+form#survey {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+form#survey > fieldset {
+    background-color: #d8a3ad99;
+    border-radius: 20px;
+    flex: 1 1 300px;
+    font-size: 0.85em;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Legend Styles */
+legend {
+    background-color: #737373;
+    color: white;
+    padding: 5px;
+}
+
+
+/* Text Area Styles */
+textarea {
+    margin-top: 10px;
+    height: 100px;
+    width: 95%;
+}
+
+
+/* Spinner Styles */
+div.formRow > input#dineSpin {
+    flex: 0 0 50px;
+}
+
+
+/* Form Button Styles */
+div#buttons {
+    text-align: center;
+    width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 15px;
+}

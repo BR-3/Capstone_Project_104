@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/*
+   Capstone Project
+   MCON 104
+
+   TSS Typographic Style Sheet
+   Author: Bluma Rodkin
+   Date:   10/23/2022
+
+   Filename: styles.css
+
+*/
+
+/* html and body styles */
+
+html {
+    height: 100%;
+    background-color: #b3b3b3;
+    font-family: arial, sans-serif;
+}
+
+body {
+    color: #737373;
+    background-color: white;
+    padding: 0 4em 4em;
+    margin: 3em;
+    font-size: 1.4em;
+	line-height: 1.4;
+    max-width: 1220px;
+	min-width: 640px;
+}
+
+body > article {
+    float: left;
+	width: 100%;
+	margin: 0 4% 0 0;
+    padding: 2em;
+}
+
+body > article#welcome{
+	width: 50%;
+    display: flow;
+	margin: 0 4% 0 0;
+}
+
+/* heading styles */
+
+body > header {
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+header img {
+    width: 17%;
+    padding: 3.5em 0 0 0;
+    float: left;
+}
+
+h1#title {
+    width: 78%;
+    font-family: "Copperplate Gothic Light", Geneva, sans-serif;
+    color: #434343;
+    font-size:5.8em;
+    float: left;
+    margin: .8em 0 0 0;
+}
+
+body > article > h1 {
+	font-size: 2em;
+}
+
+body > article > h2 {
+	font-size: 1.6em;
+}
+
+
+/*body styles*/
+
+article > p {
+	text-indent: 3em;
+}
+
+img#face {
+    float: left;
+    width: 10%;
+}
+
+img#image {
+    float: left;
+}
+
+img#machine {
+    width: 60%;
+    margin-left: 10%;
+}
+
+dl {
+	margin-left: 2%;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+dt {
+	display: block;
+	margin: 0;
+	width: 70%;
+	text-indent: 0;
+	font-weight: bold;
+	border-bottom: 1px solid #a6a6a6;
+}
+
+dd {
+	display: block;
+	margin: 0 0 3% 3%;
+	text-indent: 0;
+}
+
+div#currentDate {
+    font-size: .5em;
+    text-align: center;
+    margin: 0;
+}
+
+/* aside and blockquote styles */
+
+body > aside {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 0.8em;
+    background-color: #e3b3bd;
+    width: 30%;
+    margin: 1em;
+    float: left;
+    padding-left: 2em;
+}
+
+aside blockquote {
+    color: #434343;
+    margin: 20px 5px;
+    quotes: "\201C" "\201D";
+}
+
+aside blockquote::before {
+    content: open-quote;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+aside blockquote::after {
+    content: close-quote;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+/* hypertext links */
+
+a {
+	color: #434343;
+    text-decoration: none;
+    display: block;
+}
+
+a:visited {
+	color: #434343;
+}
+
+a:hover {
+	background-color:#d8a3ad;
+}
+
+
+/*footer styles */
+
+footer {
+	width: 100%;
+	clear: left;
+	text-align: center;
+	font-size: 1em;
+	margin: 30px 0;
+	border-top: 2px solid #c3939d;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}

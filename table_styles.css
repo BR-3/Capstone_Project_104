@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/*
+   Capstone Project
+   MCON 104
+
+   TSS Typographic Style Sheet
+   Author: Bluma Rodkin
+   Date:   10/23/2022
+
+   Filename: table_styles.css
+
+*/
+
+/*navigation list styles */
+nav ul li {
+	display: table-cell;
+	width: 20%;
+	text-align: center;
+	font-size: 2em;
+	margin-right: 2%;
+	border: thin solid #434343;
+	border-collapse: collapse;
+	background-color: #a6a6a6;
+}
+
+nav {
+	display: table;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+	float: none;
+}
+
+nav ul {
+	display: table-row;
+	margin: 0;
+}
+
+/* table styles */
+
+table {
+    border: 5px outset #434343;
+    border-collapse: collapse;
+    font-size: 0.75em;
+    width: 100%;
+	color: #737373;
+	text-indent: 0;
+}
+
+table th, table td {
+    border: 1px solid #434343;
+    padding: 5px;
+    vertical-align: center;
+	text-align: center;
+}
+
+table caption {
+	caption-side: top;
+	text-align: left;
+}
+
+/* row heading styles */
+table thead {
+    background: #d8a3ad;
+    color: #737373;
+}
+
+table thead tr {
+    height: 30px;
+}
+
+table tbody tr {
+    height: 40px;
+}
+
+/* Column Group Styles */
+col#firstCol {
+    background: #d8a3ad99;
+	color: #737373;
+    width: 11%;
+}
+
+col.timeCols {
+    background: white;
+    width: 10%;
+}
